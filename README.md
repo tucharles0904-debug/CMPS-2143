@@ -6,4 +6,4 @@
 #### Email: tucharles0904@my.msutexas.edu
 
 #### Image:
-<img src="LINK_TO_YOUR_PHOTO" width="200">
+<img src="Assignments/Assignments/A01/profile.jpg.jpeg" width="200">
