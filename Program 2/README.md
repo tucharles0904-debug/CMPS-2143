@@ -1,4 +1,4 @@
-## A07 - Program 02 (COMMAND LINE ARGS PARSER)
+## Program 02 (COMMAND LINE ARGS PARSER)
 
 ### T'onne Charles
 
