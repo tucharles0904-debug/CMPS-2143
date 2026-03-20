@@ -1,36 +1,37 @@
-# Program 2 - Command Line Args Parser
+## A07 - Program 02 (COMMAND LINE ARGS PARSER)
 
-## Build
+### T'onne Charles
 
+### Description:
+
+This program parses command-line arguments for an image processing tool called `imgtool`.
+It reads input and output filenames, processes flags and options, validates all inputs, and prints a formatted summary of the configuration.
+
+---
+
+### Files
+
+|  #  | File        | Description                                      |
+| :-: | ----------- | ------------------------------------------------ |
+|  1  | main.cpp    | Calls parser and prints formatted output         |
+|  2  | Args.h      | Defines the Args class and data structure        |
+|  3  | Args.cpp    | Implements parsing and validation logic          |
+| ETC | Other Files | Any additional supporting files (if added later) |
+
+---
+
+### Instructions
+
+- Keep all files in the same folder
+- Open terminal in the project directory
+- Compile using:
+
+```bash
 g++ -std=c++17 -Wall -Wextra -O2 main.cpp Args.cpp -o imgtool
+```
 
-## Usage
+- Run using:
 
+```bash
 ./imgtool <input_image> <output_image> [options]
-
-## Supported Options
-
---grayscale (-g)
---blur (-l)
---flipH (-h)
---flipV (-v)
---brighten N (-b N)
---rotate N (-r N)
-
-Also supports:
---brighten=N
---rotate=N
-Grouped flags: -glhv
-
-## Example Commands
-
-Valid:
-./imgtool in.png out.png --grayscale --brighten 20
-./imgtool in.png out.png -g -l -b 20 -r 90
-./imgtool in.png out.png --rotate=180
-
-Invalid:
-./imgtool in.png
-./imgtool in.png out.png --brighten
-./imgtool in.png out.png --rotate 45
-./imgtool in.png out.png --brighten twenty
+```
