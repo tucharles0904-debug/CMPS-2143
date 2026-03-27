@@ -6,24 +6,15 @@
 **ID:** 06-P01  
 **Date:** March 9, 2026  
 
----
-
 ## Description
-This program loads an image, converts it to grayscale, and saves it as a PNG file.  
-It also displays colored terminal messages using termcolor and automatically opens the output image in the system’s default viewer.
-
----
+This program loads an image, converts it to grayscale, saves it as a PNG file, and opens the output image using the system’s default viewer. It also uses termcolor to display colored terminal messages.
 
 ## Files
-- `source1.cpp` – main program
-- `stb_image.h` – image loading library
-- `stb_image_write.h` – image writing library
-- `termcolor.hpp` – colored terminal output
+- `source1.cpp`
+- `stb_image.h`
+- `stb_image_write.h`
+- `termcolor.hpp`
 
----
-
-## Build Instructions
-Compile the program using:
-
+## Build
 ```bash
 g++ -std=c++17 -O2 -Wall -Wextra -pedantic source1.cpp -o imgtool
