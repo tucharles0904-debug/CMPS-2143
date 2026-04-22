@@ -1,7 +1,7 @@
 ## Program 3 Notes
 
 **Name:** Tonne Charles  
-**Class:** CMPS 2433  
+**Class:** CMPS 2143  
 **Assignment:** Program 3   
 **Date:** APRIL 22, 2026  
 
