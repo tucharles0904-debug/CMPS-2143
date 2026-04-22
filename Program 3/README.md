@@ -3,7 +3,6 @@
 **Name:** Tonne Charles  
 **Class:** CMPS 2433  
 **Assignment:** Program 3   
-**ID:** 06-P01  
 **Date:** APRIL 22, 2026  
 
 ### Grayscale Formula Chosen
