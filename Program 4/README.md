@@ -1,13 +1,11 @@
-# Program 4 Notes
+# Program 4
 
 Name: Tonne Charles  
 Class: CMPS 2143  
 Assignment: Program 4  
 Date: May 12, 2026
 
-## Program 4 Notes
-
-### Color Class
+## Color Class
 
 For Program 4, the old `Pixel` idea was replaced with a `Color` class.
 
