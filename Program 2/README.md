@@ -1,30 +1,93 @@
-# Program 2: Command Line Args Parser
+# Program 2
 
-**Name:** Tonne Charles  
-**Class:** CMPS 2433  
-**Assignment ID:** 07-P02  
-**Date:** March 20, 2026  
+Name: T'onne Charles  
+Class: CMPS 2143  
+Assignment: Program 2  
+Date: April 2026
 
-## Description
-This program parses command-line arguments for an image processing tool called `imgtool`. It reads the required input and output filenames, parses optional flags and options, validates all user input, and prints a summary of the final configuration.
+This program is a command line argument parser for an image tool.
 
-This assignment focuses on:
-- reading `argc` and `argv`
-- handling strings
-- validating command-line input
-- packaging the parser into a clean, reusable C++ class
+The program reads the input file, output file, and any filter options typed on the command line.
 
-## Files
+## What the Program Checks
 
-| # | File     | Description |
-|---|----------|-------------|
-| 1 | `main.cpp` | Calls the parser and prints the formatted output |
-| 2 | `Args.h`   | Defines the `Args` class and its data members |
-| 3 | `Args.cpp` | Implements parsing logic and validation rules |
-| 4 | `README.md` | Explains how to build, run, and test the program |
+The program checks for:
 
-## Build Instructions
-Keep all files in the same folder. Open a terminal in that folder and compile with:
+- an input image file
+- an output image file
+- valid filter flags
+- valid integer values for brighten and rotate
+- invalid or unknown options
+
+## Supported Options
+
+```txt
+--grayscale
+--blur
+--flipH
+--flipV
+--brighten <number>
+--rotate <degrees>
+```
+
+Short options can also be used:
+
+```txt
+-g
+-l
+-h
+-v
+-b <number>
+-r <degrees>
+```
+
+## Rotate Values
+
+The rotate option only accepts these values:
+
+```txt
+0
+90
+180
+270
+```
+
+## Brighten Values
+
+The brighten option accepts values from:
+
+```txt
+-255 to 255
+```
+
+## Example Compile Command
 
 ```bash
-g++ -std=c++17 -Wall -Wextra -O2 main.cpp Args.cpp -o imgtool
+g++ -std=c++17 -O2 -Wall -Wextra -pedantic src/main.cpp src/Args.cpp -o imgtool
+```
+
+## Example Commands
+
+```bash
+./imgtool images/Hulda.jpg out1.png --grayscale
+./imgtool images/Hulda.jpg out2.png --brighten 50
+./imgtool images/Hulda.jpg out3.png --rotate 90
+./imgtool images/Hulda.jpg out4.png --grayscale --brighten 50 --rotate 90
+./imgtool images/Hulda.jpg out5.png -g -b 25 -r 180
+```
+
+## Example Error Commands
+
+```bash
+./imgtool
+./imgtool images/Hulda.jpg
+./imgtool images/Hulda.jpg out.png --brighten abc
+./imgtool images/Hulda.jpg out.png --rotate 45
+./imgtool images/Hulda.jpg out.png --unknown
+```
+
+## What I Learned
+
+In this program, I learned how to read command line arguments in C++.
+
+I also learned how to check for errors, validate user input, and store options inside a class.
